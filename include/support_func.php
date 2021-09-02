@@ -77,18 +77,3 @@ function woo_my_account_order()
     return $myorder;
 }
 add_filter('woocommerce_account_menu_items', 'woo_my_account_order');
-
-
-// =======================================================
-// author:  Rod Ornellas
-// info:    Change TITLE of Endpoint Page
-// ========================================================
-function rod_woo_endpoint_title($title, $id)
-{
-    $title = __(
-        "Rod's My Account Stuff",
-        "woocommerce"
-    );
-    return $title;
-}
-add_filter('the_title', 'rod_woo_endpoint_title', 10, 2);
